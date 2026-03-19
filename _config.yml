@@ -236,7 +236,7 @@ collections:
 
 
 # These settings control how pages and collections are included in the site
- defaults:
+defaults:
    # _posts
    - scope:
        path: ""
