@@ -24,9 +24,9 @@ repository               : "Clifford-Swanson/Clifford-Swanson.github.io"
 author:
   # Biographic information
   avatar           : "clifford_swanson.jpg"
-  name             : "Your Sidebar Name"
+  name             : "Clifford's Contact"
   pronouns         : # example: "she/her"  
-  bio              : "Clifford Swanson is an Assistant Professor in Civil and Environmental Engineering.\nTheir research focuses on environmental microbiology, water chemistry, and public health improvements."
+  bio              : #"Clifford Swanson is an Assistant Professor in Civil and Environmental Engineering.\nTheir research focuses on environmental microbiology, water chemistry, and public health improvements."
   location         : "Moscow, Idaho"
   employer         : "University of Idaho"
   uri              : "https://www.uidaho.edu/engineering/academics/civil-environmental-engineering"
