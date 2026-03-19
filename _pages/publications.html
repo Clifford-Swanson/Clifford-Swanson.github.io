@@ -13,24 +13,54 @@ author_profile: false
 
 <!-- New style rendering if publication categories are defined -->
 {% if site.publication_category %}
-  {% for category in site.publication_category  %}
-    {% assign title_shown = false %}
-    {% for post in site.publications reversed %}
-      {% if post.category != category[0] %}
-        {% continue %}
+  {% for category in site.publication_category %}
+  
+  {% assign posts_in_category = site.publications | where: "category", category[0] %}
+
+  {% if posts_in_category.size > 0 %}
+    <h2>{{ category[1].title }}</h2><hr />
+
+    {% for area in site.research_area_order %}
+
+      {% assign posts_in_area = posts_in_category | where: "research_area", area %}
+
+      {% if posts_in_area.size > 0 %}
+        <h3>{{ area }}</h3>
+
+        {% assign sorted_posts = posts_in_area | sort: "date" | reverse %}
+
+        {% for post in sorted_posts %}
+          {% include archive-single.html %}
+        {% endfor %}
+
       {% endif %}
-      {% unless title_shown %}
-        <h2>{{ category[1].title }}</h2><hr />
-        {% assign title_shown = true %}
-      {% endunless %}
-      {% include archive-single.html %}
+
     {% endfor %}
-  {% endfor %}
+
+  {% endif %}
+
+{% endfor %}
 {% else %}
   {% for post in site.publications reversed %}
     {% include archive-single.html %}
   {% endfor %}
 {% endif %}
 
+{% assign all_areas = posts_in_category | map: "research_area" | uniq %}
 
+{% for area in all_areas %}
+  {% unless site.research_area_order contains area %}
+    
+    {% assign posts_in_area = posts_in_category | where: "research_area", area %}
+
+    <h3>{{ area }}</h3>
+
+    {% assign sorted_posts = posts_in_area | sort: "date" | reverse %}
+
+    {% for post in sorted_posts %}
+      {% include archive-single.html %}
+    {% endfor %}
+
+  {% endunless %}
+{% endfor %}
 

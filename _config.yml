@@ -292,6 +292,17 @@ defaults:
        share: true
 
 
+#For organizing research areas
+research_area_order:
+  - Drinking water
+  - Public health
+  - Wastewater
+  - Built Environment
+  - Microbiology
+  - Machine Learning
+  - Other
+
+
 # Sass/SCSS These are the style and formatting
 sass:
   sass_dir: _sass
