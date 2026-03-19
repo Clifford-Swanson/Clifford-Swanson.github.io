@@ -91,6 +91,18 @@ publication_category:
   conferences:
     title: 'Conference Papers'
 
+
+#For organizing research areas
+research_area_order:
+  - Drinking Water
+  - Public Health
+  - Wastewater
+  - Built Environment
+  - Microbiology
+  - Machine Learning
+  - Other
+
+
 # Site Settings
 teaser                   :  # filename of teaser fallback teaser image placed in /images/ for social media previews
 breadcrumbs              : false # true, false (default)
@@ -292,15 +304,6 @@ defaults:
        share: true
 
 
-#For organizing research areas
-research_area_order:
-  - Drinking water
-  - Public health
-  - Wastewater
-  - Built Environment
-  - Microbiology
-  - Machine Learning
-  - Other
 
 
 # Sass/SCSS These are the style and formatting
