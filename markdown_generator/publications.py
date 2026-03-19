@@ -19,8 +19,8 @@ import sys
 EXIT_ERROR = 0
 
 # The expected layout of the CSV / TSV file
-HEADER_LEGACY  = ['pub_date', 'title', 'venue', 'excerpt', 'citation', 'url_slug', 'paper_url', 'slides_url']
-HEADER_UPDATED = ['pub_date', 'title', 'venue', 'excerpt', 'citation', 'url_slug', 'paper_url', 'slides_url', 'category']
+HEADER_LEGACY  = ['pub_date', 'title', 'venue', 'excerpt',  'url_slug', 'paper_url']
+HEADER_UPDATED = ['pub_date', 'title', 'venue', 'excerpt',  'url_slug', 'paper_url', 'category','research_area']
 
 # YAML is very picky about how it takes a valid string, so we are replacing single and double quotes (and ampersands)
 # with their HTML encoded equivalents. This makes them look not so readable in raw format, but they are parsed and
@@ -54,7 +54,7 @@ def create_md(lines: list, layout: list):
         md += f"\nvenue: '{html_escape(item[layout.index('venue')])}'"
         if len(str(item[layout.index('paper_url')])) > 5:
             md += f"\npaperurl: '{item[layout.index('paper_url')]}'"
-        md += f"\ncitation: '{html_escape(item[layout.index('citation')])}'"
+        #md += f"\ncitation: '{html_escape(item[layout.index('citation')])}'"
         md += "\n---"
         
         # Markdown description for individual page
@@ -62,7 +62,7 @@ def create_md(lines: list, layout: list):
             md += f"\n<a href='{item[layout.index('paper_url')]}'>Download paper here</a>\n"
         if len(str(item[layout.index('excerpt')])) > 5:
             md += f"\n{html_escape(item[layout.index('excerpt')])}\n"
-        md += f"\nRecommended citation: {item[layout.index('citation')]}"
+        #md += f"\nRecommended citation: {item[layout.index('citation')]}"
         
         # Write the file
         md_filename = os.path.join("../_publications/", os.path.basename(md_filename))
