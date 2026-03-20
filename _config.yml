@@ -290,7 +290,7 @@ defaults:
        comments: true
        sidebar: 
         nav:
-          - pubs
+          - publications
    # _portfolio
    - scope:
        path: ""

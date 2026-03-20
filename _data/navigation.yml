@@ -28,58 +28,58 @@ main:
 
 
 
-pubs:
+publications:
   - title: "Books"
-    url: /pubs/books/
+    url: /publications/books/
     children:
       - title: "Drinking Water"
-        url: /pubs/books/drinkingwater/
+        url: /publications/books/drinkingwater/
       - title: "Public Health"
-        url: /pubs/books/publichealth/
+        url: /publications/books/publichealth/
       - title: "Wastewater"
-        url: /pubs/books/wastewater/
+        url: /publications/books/wastewater/
       - title: "Built Environment"
-        url: /pubs/books/builtenv/
+        url: /publications/books/builtenv/
       - title: "Microbiology"
-        url: /pubs/books/micro/
+        url: /publications/books/micro/
       - title: "Machine Learning"
-        url: /pubs/books/machinelearning/
+        url: /publications/books/machinelearning/
       - title: "Other"
-        url: /pubs/books/other/
+        url: /publications/books/other/
   
   - title: "Journal Articles"
     url: /pubs/JA/
     children:
       - title: "Drinking Water"
-        url: /pubs/JA/drinkingwater/
+        url: /publications/JA/drinkingwater/
       - title: "Public Health"
-        url: /pubs/JA/publichealth/
+        url: /publications/JA/publichealth/
       - title: "Wastewater"
-        url: /pubs/JA/wastewater/
+        url: /publications/JA/wastewater/
       - title: "Built Environment"
-        url: /pubs/JA/builtenv/
+        url: /publications/JA/builtenv/
       - title: "Microbiology"
-        url: /pubs/JA/micro/
+        url: /publications/JA/micro/
       - title: "Machine Learning"
-        url: /pubs/JA/machinelearning/
+        url: /publications/JA/machinelearning/
       - title: "Other"
-        url: /pubs/JA/other/
+        url: /publications/JA/other/
   
   - title: "Conference Paper"
-    url: /pubs/conf/
+    url: /publications/conf/
     children:
       - title: "Drinking Water"
-        url: /pubs/conf/drinkingwater/
+        url: /publications/conf/drinkingwater/
       - title: "Public Health"
-        url: /pubs/conf/publichealth/
+        url: /publications/conf/publichealth/
       - title: "Wastewater"
-        url: /pubs/conf/wastewater/
+        url: /publications/conf/wastewater/
       - title: "Built Environment"
-        url: /pubs/conf/builtenv/
+        url: /publications/conf/builtenv/
       - title: "Microbiology"
-        url: /pubs/conf/micro/
+        url: /publications/conf/micro/
       - title: "Machine Learning"
-        url: /pubs/conf/machinelearning/
+        url: /publications/conf/machinelearning/
       - title: "Other"
-        url: /pubs/conf/other/
+        url: /publications/conf/other/
   
