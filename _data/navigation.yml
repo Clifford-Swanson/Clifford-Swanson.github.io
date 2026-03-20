@@ -29,57 +29,20 @@ main:
 
 
 publications:
-  - title: "Books"
-    url: /publications/books/
+  - title: "Research Area"
     children:
       - title: "Drinking Water"
-        url: /publications/books/drinkingwater/
+        url: /publications/drinkingwater/
       - title: "Public Health"
-        url: /publications/books/publichealth/
+        url: /publications/publichealth/
       - title: "Wastewater"
-        url: /publications/books/wastewater/
+        url: /publications/wastewater/
       - title: "Built Environment"
-        url: /publications/books/builtenv/
+        url: /publications/builtenv/
       - title: "Microbiology"
-        url: /publications/books/micro/
+        url: /publications/micro/
       - title: "Machine Learning"
-        url: /publications/books/machinelearning/
+        url: /publications/machinelearning/
       - title: "Other"
-        url: /publications/books/other/
-  
-  - title: "Journal Articles"
-    url: /pubs/JA/
-    children:
-      - title: "Drinking Water"
-        url: /publications/JA/drinkingwater/
-      - title: "Public Health"
-        url: /publications/JA/publichealth/
-      - title: "Wastewater"
-        url: /publications/JA/wastewater/
-      - title: "Built Environment"
-        url: /publications/JA/builtenv/
-      - title: "Microbiology"
-        url: /publications/JA/micro/
-      - title: "Machine Learning"
-        url: /publications/JA/machinelearning/
-      - title: "Other"
-        url: /publications/JA/other/
-  
-  - title: "Conference Paper"
-    url: /publications/conf/
-    children:
-      - title: "Drinking Water"
-        url: /publications/conf/drinkingwater/
-      - title: "Public Health"
-        url: /publications/conf/publichealth/
-      - title: "Wastewater"
-        url: /publications/conf/wastewater/
-      - title: "Built Environment"
-        url: /publications/conf/builtenv/
-      - title: "Microbiology"
-        url: /publications/conf/micro/
-      - title: "Machine Learning"
-        url: /publications/conf/machinelearning/
-      - title: "Other"
-        url: /publications/conf/other/
+        url: /publications/other/
   
