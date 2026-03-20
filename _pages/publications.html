@@ -15,7 +15,7 @@ author_profile: false
 {% assign pubs = site.publications %}
 
 {%- comment -%}
-Build list of all research areas (including "Other")
+Build all research areas (including "Other")
 {%- endcomment -%}
 {% assign all_areas = "" | split: "" %}
 
@@ -33,18 +33,11 @@ Build list of all research areas (including "Other")
   {% endif %}
 {% endfor %}
 
-{% assign areas = all_areas | sort %}
-
 {%- comment -%}
-Main loop: Research Area → Category → Papers
+1. Loop through defined order
 {%- endcomment -%}
-{% for area in areas %}
+{% for area in site.research_area_order %}
 
-  <h2>{{ area }}</h2><hr />
-
-  {%- comment -%}
-  Collect posts for this research area
-  {%- endcomment -%}
   {% assign posts_in_area = "" | split: "" %}
 
   {% for post in pubs %}
@@ -59,25 +52,61 @@ Main loop: Research Area → Category → Papers
     {% endif %}
   {% endfor %}
 
-  {%- comment -%}
-  Now group by category
-  {%- endcomment -%}
-  {% for category in site.publication_category %}
+  {% if posts_in_area.size > 0 %}
+    <h2>{{ area }}</h2><hr />
 
-    {% assign posts_in_category = posts_in_area | where: "category", category[0] %}
+    {% for category in site.publication_category %}
 
-    {% if posts_in_category.size > 0 %}
-      <h3>{{ category[1].title }}</h3>
+      {% assign posts_in_category = posts_in_area | where: "category", category[0] %}
 
-      {% assign sorted_posts = posts_in_category | sort: "date" | reverse %}
+      {% if posts_in_category.size > 0 %}
+        <h3>{{ category[1].title }}</h3>
 
-      {% for post in sorted_posts %}
-        {% include archive-single.html %}
-      {% endfor %}
+        {% assign sorted_posts = posts_in_category | sort: "date" | reverse %}
 
-    {% endif %}
+        {% for post in sorted_posts %}
+          {% include archive-single.html %}
+        {% endfor %}
+      {% endif %}
 
-  {% endfor %}
+    {% endfor %}
+  {% endif %}
 
 {% endfor %}
 
+{%- comment -%}
+2. Catch any research areas NOT listed in config
+{%- endcomment -%}
+{% for area in all_areas %}
+  {% unless site.research_area_order contains area %}
+
+    {% assign posts_in_area = "" | split: "" %}
+
+    {% for post in pubs %}
+      {% if post.research_area contains area %}
+        {% assign posts_in_area = posts_in_area | push: post %}
+      {% endif %}
+    {% endfor %}
+
+    {% if posts_in_area.size > 0 %}
+      <h2>{{ area }}</h2><hr />
+
+      {% for category in site.publication_category %}
+
+        {% assign posts_in_category = posts_in_area | where: "category", category[0] %}
+
+        {% if posts_in_category.size > 0 %}
+          <h3>{{ category[1].title }}</h3>
+
+          {% assign sorted_posts = posts_in_category | sort: "date" | reverse %}
+
+          {% for post in sorted_posts %}
+            {% include archive-single.html %}
+          {% endfor %}
+        {% endif %}
+
+      {% endfor %}
+    {% endif %}
+
+  {% endunless %}
+{% endfor %}
