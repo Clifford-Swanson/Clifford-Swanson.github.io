@@ -31,23 +31,38 @@ HTML_ESCAPE_TABLE = {
     "'": "&apos;"
     }
 
+
+def clean_text(text):
+    if not isinstance(text, str):
+        return text
+    return (
+        text
+        .replace('\u00A0', ' ')   # non-breaking space
+        .replace('–', '-')        # en dash
+        .replace('—', '-')        # em dash
+        .replace('“', '"')
+        .replace('”', '"')
+        .replace('’', "'")
+        .strip()
+    )
+
 # This is where the heavy lifting is done. This loops through all the rows in the TSV dataframe, then starts to
 # concatenate a big string (```md```) that contains the markdown for each type. It does the YAML metadata first, then
 # does the description for the individual page.
 def create_md(lines: list, layout: list):
     for item in lines:
         # Parse the filename information
-        md_filename = f"{item[layout.index('pub_date')]}-{item[layout.index('url_slug')]}.md"
-        html_filename = str(item[layout.index('pub_date')]) + "-" + item[layout.index('url_slug')]
+        md_filename = f"{clean_text(item[layout.index('pub_date')])}-{clean_text(item[layout.index('url_slug')])}.md"
+        html_filename = str(clean_text(item[layout.index('pub_date')])) + "-" + clean_text(item[layout.index('url_slug')])
         
         # Parse the YAML variables
-        md = f"---\ntitle: \"{item[layout.index('title')]}\"\n"
+        md = f"---\ntitle: \"{clean_text(item[layout.index('title')])}\"\n"
         md += "collection: publications"
         if len(layout) == len(HEADER_UPDATED):
-            md += f"\ncategory: {item[layout.index('category')]}"
+            md += f"\ncategory: {clean_text(item[layout.index('category')])}"
         else:
             md += "\ncategory: manuscripts"
-        research_area_raw = str(item[layout.index('research_area')]).strip()
+        research_area_raw = str(clean_text(item[layout.index('research_area')])).strip()
         if research_area_raw:
             areas = [a.strip() for a in research_area_raw.split('/') if a.strip()]
             if areas:
@@ -56,25 +71,25 @@ def create_md(lines: list, layout: list):
                     md += f"\n  - {html_escape(area)}"
 
         md += f"\npermalink: /publication/{html_filename}"
-        if len(str(item[layout.index('excerpt')])) > 5:
-            md += f"\nexcerpt: '{html_escape(item[layout.index('excerpt')])}'"
-        md += f"\ndate: {item[layout.index('pub_date')]}"
-        md += f"\nvenue: '{html_escape(item[layout.index('venue')])}'"
-        if len(str(item[layout.index('paper_url')])) > 5:
-            md += f"\npaperurl: '{item[layout.index('paper_url')]}'"
+        if len(str(clean_text(item[layout.index('excerpt')]))) > 5:
+            md += f"\nexcerpt: '{html_escape(clean_text(item[layout.index('excerpt')]))}'"
+        md += f"\ndate: {clean_text(item[layout.index('pub_date')])}"
+        md += f"\nvenue: '{html_escape(clean_text(item[layout.index('venue')]))}'"
+        if len(str(clean_text(item[layout.index('paper_url')]))) > 5:
+            md += f"\npaperurl: '{clean_text(item[layout.index('paper_url')])}'"
         #md += f"\ncitation: '{html_escape(item[layout.index('citation')])}'"
         md += "\n---"
         
         # Markdown description for individual page
-        if len(str(item[layout.index('paper_url')])) > 5:
-            md += f"\n<a href='{item[layout.index('paper_url')]}'>Download paper here</a>\n"
-        if len(str(item[layout.index('excerpt')])) > 5:
-            md += f"\n{html_escape(item[layout.index('excerpt')])}\n"
+        if len(str(clean_text(item[layout.index('paper_url')]))) > 5:
+            md += f"\n<a href='{clean_text(item[layout.index('paper_url')])}'>Download paper here</a>\n"
+        if len(str(clean_text(item[layout.index('excerpt')]))) > 5:
+            md += f"\n{html_escape(clean_text(item[layout.index('excerpt')]))}\n"
         #md += f"\nRecommended citation: {item[layout.index('citation')]}"
         
         # Write the file
         md_filename = os.path.join("../_publications/", os.path.basename(md_filename))
-        with open(md_filename, 'w') as f:
+        with open(md_filename, 'w', encoding='utf-8') as f:
             f.write(md)
 
 def html_escape(text):
@@ -86,7 +101,7 @@ def read(filename: str) -> tuple[list, list]:
 
     # Read the contents of the file
     lines = []
-    with open(filename, 'r') as file:
+    with open(filename, 'r', encoding='utf-8', errors='ignore') as file:
         delimiter = ',' if filename.endswith('.csv') else '\t'
         reader = csv.reader(file, delimiter=delimiter)
         for row in reader:
