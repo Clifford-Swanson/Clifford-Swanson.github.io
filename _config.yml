@@ -299,14 +299,6 @@ defaults:
        sidebar: 
 
 
----
-layout: archive
-title: "Publications"
-permalink: /publications/
-author_profile: false
-sidebar:
-  nav: "publications"
----
 
 # Sass/SCSS These are the style and formatting
 sass:
