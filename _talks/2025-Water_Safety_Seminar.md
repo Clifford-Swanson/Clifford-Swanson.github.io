@@ -7,6 +7,6 @@ research_area:
   - Public Health
   - Data Science
 citation: 'CS Swanson (2025). Holistic Assessment of Water Safety. IWWRI'
-date: 2025
+date: 10/7/2025
 venue: 'Idaho Water Resource Research Institute'
 ---
