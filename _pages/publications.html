@@ -53,7 +53,9 @@ Build all research areas (including "Other")
   {% endfor %}
 
   {% if posts_in_area.size > 0 %}
-    <h2>{{ area }}</h2><hr />
+    <h2 id="{{ area | downcase | replace: ' ', '-' }}">
+      {{ area }}
+    </h2>
 
     {% for category in site.publication_category %}
 

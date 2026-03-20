@@ -32,17 +32,17 @@ publications:
   - title: "Research Area"
     children:
       - title: "Drinking Water"
-        url: /publications/drinkingwater/
+        url: /publications/#drinking-water
       - title: "Public Health"
-        url: /publications/publichealth/
+        url: /publications/#public-health
       - title: "Wastewater"
-        url: /publications/wastewater/
+        url: /publications/#wastewater
       - title: "Built Environment"
-        url: /publications/builtenv/
+        url: /publications/#built-environment
       - title: "Microbiology"
-        url: /publications/micro/
-      - title: "Machine Learning"
-        url: /publications/machinelearning/
+        url: /publications/#microbiology
+      - title: "Data Science"
+        url: /publications/#data-science
       - title: "Other"
-        url: /publications/other/
+        url: /publications/#other
   
