@@ -7,20 +7,31 @@ sidebar:
   nav: "publications"
 ---
 
+{% comment %}
+Optional Google Scholar link
+{% endcomment %}
 {% if site.author.googlescholar %}
-  <div class="wordwrap">You can also find my articles on <a href="{{site.author.googlescholar}}">my Google Scholar profile</a>.</div>
+<div class="wordwrap">
+  You can also find my articles on 
+  <a href="{{ site.author.googlescholar }}">my Google Scholar profile</a>.
+</div>
 {% endif %}
 
 {% include base_path %}
 
-<!-- New style rendering if publication categories are defined -->
-{% assign pubs = site.publications %}
+{% comment %}
+Include sidebar (sticky)
+{% endcomment %}
+{% if page.sidebar %}
+  {% include sidebar.html %}
+{% endif %}
 
-{%- comment -%}
-Build all research areas (including "Other")
-{%- endcomment -%}
+{% assign pubs = site.publications %}
 {% assign all_areas = "" | split: "" %}
 
+{% comment %}
+Collect all research areas
+{% endcomment %}
 {% for post in pubs %}
   {% if post.research_area %}
     {% for area in post.research_area %}
@@ -35,11 +46,10 @@ Build all research areas (including "Other")
   {% endif %}
 {% endfor %}
 
-{%- comment -%}
-1. Loop through defined order
-{%- endcomment -%}
+{% comment %}
+Render publications in order defined by site.research_area_order
+{% endcomment %}
 {% for area in site.research_area_order %}
-
   {% assign posts_in_area = "" | split: "" %}
 
   {% for post in pubs %}
@@ -55,35 +65,26 @@ Build all research areas (including "Other")
   {% endfor %}
 
   {% if posts_in_area.size > 0 %}
-    <h2 id="{{ area | downcase | replace: ' ', '-' }}">
-      {{ area }}
-    </h2>
+    <h2 id="{{ area | downcase | replace: ' ', '-' }}">{{ area }}</h2>
 
     {% for category in site.publication_category %}
-
       {% assign posts_in_category = posts_in_area | where: "category", category[0] %}
-
       {% if posts_in_category.size > 0 %}
         <h3>{{ category[1].title }}</h3>
-
         {% assign sorted_posts = posts_in_category | sort: "date" | reverse %}
-
         {% for post in sorted_posts %}
           {% include archive-single.html %}
         {% endfor %}
       {% endif %}
-
     {% endfor %}
   {% endif %}
-
 {% endfor %}
 
-{%- comment -%}
-2. Catch any research areas NOT listed in config
-{%- endcomment -%}
+{% comment %}
+Render any research areas not listed in site.research_area_order
+{% endcomment %}
 {% for area in all_areas %}
   {% unless site.research_area_order contains area %}
-
     {% assign posts_in_area = "" | split: "" %}
 
     {% for post in pubs %}
@@ -96,21 +97,15 @@ Build all research areas (including "Other")
       <h2>{{ area }}</h2><hr />
 
       {% for category in site.publication_category %}
-
         {% assign posts_in_category = posts_in_area | where: "category", category[0] %}
-
         {% if posts_in_category.size > 0 %}
           <h3>{{ category[1].title }}</h3>
-
           {% assign sorted_posts = posts_in_category | sort: "date" | reverse %}
-
           {% for post in sorted_posts %}
             {% include archive-single.html %}
           {% endfor %}
         {% endif %}
-
       {% endfor %}
     {% endif %}
-
   {% endunless %}
 {% endfor %}
