@@ -7,6 +7,6 @@ research_area:
   - Surface Water
   - Data Science
 citation: 'CS Swanson &amp; Q He (2022). Microbiological Linkages between Drinking Water and Source Water. In 31st Tennessee Water Resources Symposium. TNWRA'
-date: 4/20/2022
+date: 2022-04-20
 venue: 'Tennessee Chapter - American Water Resource Association'
 ---
