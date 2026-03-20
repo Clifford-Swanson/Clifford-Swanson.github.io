@@ -105,7 +105,7 @@ research_area_order:
 talks_category:
   seminar:
     title: 'Seminars - Invited Talks'  
-  conferences:
+  conference:
     title: 'Conference Presentations'
 
 
