@@ -21,10 +21,11 @@ Optional Google Scholar link
 
 {% comment %}
 Include sidebar (sticky)
-{% endcomment %}
 {% if page.sidebar %}
   {% include sidebar.html %}
 {% endif %}
+{% endcomment %}
+
 
 {% assign pubs = site.publications %}
 {% assign all_areas = "" | split: "" %}
