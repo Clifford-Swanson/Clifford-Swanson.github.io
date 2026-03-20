@@ -249,18 +249,17 @@ collections:
 
 # These settings control how pages and collections are included in the site
 defaults:
-   # _posts
+   # _publications
    - scope:
        path: ""
-       type: posts
+       type: publications
      values:
        layout: single
        author_profile: true
-       read_time: true
-       comments: true
        share: true
-       related: true
+       comments: true
        sidebar: 
+        nav: "publications"
    # _pages
    - scope:
        path: ""
@@ -279,17 +278,6 @@ defaults:
        share: true
        comments: true
        sidebar: 
-   # _publications
-   - scope:
-       path: ""
-       type: publications
-     values:
-       layout: single
-       author_profile: true
-       share: true
-       comments: true
-       sidebar: 
-        nav: "publications"
    # _portfolio
    - scope:
        path: ""
