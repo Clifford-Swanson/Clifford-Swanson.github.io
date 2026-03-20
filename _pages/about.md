@@ -11,6 +11,9 @@ Clifford Swanson is an Assistant Professor at the University of Idaho. Their are
 
 You can find [Publications](https://clifford-swanson.github.io/publications), [Conference Talks](https://clifford-swanson.github.io/talks), and [Courses](https://clifford-swansons.github.io/courses) taught by Clifford at UI on this site. Specific online educational materials can be found here as well, with special focus on areas of expertise under the [Blog](https://clifford-swansons.github.io/blog) tab.
 
+
+![Swanson Research Overview](/images/abstract_group_images.png)
+
 I. Drinking Water Safety
 ======
 A major focus of our research is with drinking water safety, focusing on dynamic contaminants ranging from microbial pathogens to chemical contaminants. Our goal is to create a mechanistic understanding for how these contaminants form and persist in drinking water systems in order to improve public health outcomes of drinking water systems. Currently we have funded projects looking at biofilm variability and pathogen presence in a public water system in Eastern Washington.
@@ -25,8 +28,7 @@ We also seek to leverage these tools to develop environmental biotechnology for 
 
 
 
-Example: editing a Markdown file for a talk
-![Editing a Markdown file for a talk](/images/editing-talk.png)
+
 
 For more info
 ------
