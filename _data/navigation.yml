@@ -25,3 +25,61 @@ main:
     
   - title: "Contact"
     url: /contact/
+
+
+
+pubs:
+  - title: "Books"
+    url: /pubs/books/
+    children:
+      - title: "Drinking Water"
+        url: /pubs/books/drinkingwater/
+      - title: "Public Health"
+        url: /pubs/books/publichealth/
+      - title: "Wastewater"
+        url: /pubs/books/wastewater/
+      - title: "Built Environment"
+        url: /pubs/books/builtenv/
+      - title: "Microbiology"
+        url: /pubs/books/micro/
+      - title: "Machine Learning"
+        url: /pubs/books/machinelearning/
+      - title: "Other"
+        url: /pubs/books/other/
+  
+  - title: "Journal Articles"
+    url: /pubs/JA/
+    children:
+      - title: "Drinking Water"
+        url: /pubs/JA/drinkingwater/
+      - title: "Public Health"
+        url: /pubs/JA/publichealth/
+      - title: "Wastewater"
+        url: /pubs/JA/wastewater/
+      - title: "Built Environment"
+        url: /pubs/JA/builtenv/
+      - title: "Microbiology"
+        url: /pubs/JA/micro/
+      - title: "Machine Learning"
+        url: /pubs/JA/machinelearning/
+      - title: "Other"
+        url: /pubs/JA/other/
+  
+  - title: "Conference Paper"
+    url: /pubs/conf/
+    children:
+      - title: "Drinking Water"
+        url: /pubs/conf/drinkingwater/
+      - title: "Public Health"
+        url: /pubs/conf/publichealth/
+      - title: "Wastewater"
+        url: /pubs/conf/wastewater/
+      - title: "Built Environment"
+        url: /pubs/conf/builtenv/
+      - title: "Microbiology"
+        url: /pubs/conf/micro/
+      - title: "Machine Learning"
+        url: /pubs/conf/machinelearning/
+      - title: "Other"
+        url: /pubs/conf/other/
+  
