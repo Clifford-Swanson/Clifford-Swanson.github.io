@@ -1,0 +1,103 @@
+---
+layout: archive
+title: "Talks"
+permalink: /talks/
+author_profile: false
+sidebar:
+  nav: "talks"
+---
+
+
+{% include base_path %}
+
+{% comment %}
+Include sidebar (sticky)
+{% if page.sidebar %}
+  {% include sidebar.html %}
+{% endif %}
+{% endcomment %}
+
+
+{% assign talks = site.talks %}
+{% assign all_areas = "" | split: "" %}
+
+{% comment %}
+Collect all research areas
+{% endcomment %}
+{% for post in talks %}
+  {% if post.research_area %}
+    {% for area in post.research_area %}
+      {% unless all_areas contains area %}
+        {% assign all_areas = all_areas | push: area %}
+      {% endunless %}
+    {% endfor %}
+  {% else %}
+    {% unless all_areas contains "Other" %}
+      {% assign all_areas = all_areas | push: "Other" %}
+    {% endunless %}
+  {% endif %}
+{% endfor %}
+
+{% comment %}
+Render publications in order defined by site.research_area_order
+{% endcomment %}
+{% for area in site.research_area_order %}
+  {% assign posts_in_area = "" | split: "" %}
+
+  {% for post in talks %}
+    {% if area == "Other" %}
+      {% if post.research_area == nil or post.research_area == empty %}
+        {% assign posts_in_area = posts_in_area | push: post %}
+      {% endif %}
+    {% else %}
+      {% if post.research_area contains area %}
+        {% assign posts_in_area = posts_in_area | push: post %}
+      {% endif %}
+    {% endif %}
+  {% endfor %}
+
+  {% if posts_in_area.size > 0 %}
+    <h2 id="{{ area | downcase | replace: ' ', '-' }}">{{ area }}</h2>
+
+    {% for category in site.talks_category %}
+      {% assign posts_in_category = posts_in_area | where: "category", category[0] %}
+      {% if posts_in_category.size > 0 %}
+        <h3>{{ category[1].title }}</h3>
+        {% assign sorted_posts = posts_in_category | sort: "date" | reverse %}
+        {% for post in sorted_posts %}
+          {% include archive-single.html %}
+        {% endfor %}
+      {% endif %}
+    {% endfor %}
+  {% endif %}
+{% endfor %}
+
+{% comment %}
+Render any research areas not listed in site.research_area_order
+{% endcomment %}
+{% for area in all_areas %}
+  {% unless site.research_area_order contains area %}
+    {% assign posts_in_area = "" | split: "" %}
+
+    {% for post in pubs %}
+      {% if post.research_area contains area %}
+        {% assign posts_in_area = posts_in_area | push: post %}
+      {% endif %}
+    {% endfor %}
+
+    {% if posts_in_area.size > 0 %}
+      <h2>{{ area }}</h2><hr />
+
+      {% for category in site.talks_category %}
+        {% assign posts_in_category = posts_in_area | where: "category", category[0] %}
+        {% if posts_in_category.size > 0 %}
+          <h3>{{ category[1].title }}</h3>
+          {% assign sorted_posts = posts_in_category | sort: "date" | reverse %}
+          {% for post in sorted_posts %}
+            {% include archive-single.html %}
+          {% endfor %}
+        {% endif %}
+      {% endfor %}
+    {% endif %}
+  {% endunless %}
+{% endfor %}

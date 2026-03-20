@@ -102,6 +102,12 @@ research_area_order:
   - Data Science
   - Other
 
+talks_category:
+  seminar:
+    title: 'Seminars - Invited Talks'  
+  conferences:
+    title: 'Conference Presentations'
+
 
 # Site Settings
 teaser                   :  # filename of teaser fallback teaser image placed in /images/ for social media previews

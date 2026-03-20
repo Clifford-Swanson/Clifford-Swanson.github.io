@@ -19,12 +19,6 @@ main:
 
   - title: "Teaching"
     url: /teaching/    
-    children:
-    - title: "Courses"
-      url: /teaching/courses/
-    - title: "Water Chemistry"
-      url: /teaching/water-chemistry/
-    
 
   - title: "Contact"
     url: /contact/
@@ -48,4 +42,23 @@ publications:
         url: /publications/#data-science
       - title: "Other"
         url: /publications/#other
-  
+
+
+talks:
+  - title: "Research Area"
+    children:
+      - title: "Drinking Water"
+        url: /talks/#drinking-water
+      - title: "Public Health"
+        url: /talks/#public-health
+      - title: "Wastewater"
+        url: /talks/#wastewater
+      - title: "Built Environment"
+        url: /talks/#built-environment
+      - title: "Microbiology"
+        url: /talks/#microbiology
+      - title: "Data Science"
+        url: /talks/#data-science
+      - title: "Other"
+        url: /talks/#other
+
