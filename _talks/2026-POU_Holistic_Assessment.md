@@ -1,6 +1,6 @@
 ---
 title: "Holistic Assessment of Point-of-Use Carbon Filters on Drinking Water Safety"
-collection: publications
+collection: talks
 category: conference
 research_area:
   - Drinking Water

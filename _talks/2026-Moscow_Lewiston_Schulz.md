@@ -1,6 +1,6 @@
 ---
 title: "Water System Factors that Impact Exposure to Opportunistic Pathogens"
-collection: publications
+collection: talks
 category: conference
 research_area:
   - Drinking Water

@@ -1,6 +1,6 @@
 ---
 title: "Microbiome-Scale Identification of Potential Microbial biomarkers in Streams Impacted by Urbanization"
-collection: publications
+collection: talks
 category: conference
 research_area:
   - Data Science

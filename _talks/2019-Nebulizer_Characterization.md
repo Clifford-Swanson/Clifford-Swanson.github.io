@@ -1,6 +1,6 @@
 ---
 title: "Metagenomic Characterization of Microbial Contamination in Nebulizers"
-collection: publications
+collection: talks
 category: conference
 research_area:
   - Public Health

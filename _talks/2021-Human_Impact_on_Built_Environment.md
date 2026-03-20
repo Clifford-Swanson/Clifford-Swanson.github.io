@@ -1,6 +1,6 @@
 ---
 title: "Linking Human Impact to Building Microbiomes: A Longitudinal Case Study "
-collection: publications
+collection: talks
 category: conference
 research_area:
   - Public Health

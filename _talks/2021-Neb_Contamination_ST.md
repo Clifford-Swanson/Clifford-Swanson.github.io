@@ -1,6 +1,6 @@
 ---
 title: " Sources of Bacterial Contamination of Nebulizer Devices"
-collection: publications
+collection: talks
 category: conference
 research_area:
   - Public Health

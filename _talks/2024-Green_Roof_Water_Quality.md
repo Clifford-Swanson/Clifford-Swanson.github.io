@@ -1,6 +1,6 @@
 ---
 title: "Investigation of Microbiological Water Quality During Rooftop Rainwater Harvest"
-collection: publications
+collection: talks
 category: conference
 research_area:
   - Storm Water

@@ -1,6 +1,6 @@
 ---
 title: "Response of Anaerobic Digestion to Temperature Fluctuation in Wastewater Treatment"
-collection: publications
+collection: talks
 category: conference
 research_area:
   - Wastewater

@@ -1,6 +1,6 @@
 ---
 title: "Drinking Water Quality in Premise Plumbing: Impact of Stagnation"
-collection: publications
+collection: talks
 category: conference
 research_area:
   - Drinking Water

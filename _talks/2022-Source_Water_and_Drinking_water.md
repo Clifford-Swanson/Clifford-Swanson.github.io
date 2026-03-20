@@ -1,6 +1,6 @@
 ---
 title: "Microbiological Linkages between Drinking Water and Source Water"
-collection: publications
+collection: talks
 category: conference
 research_area:
   - Drinking Water

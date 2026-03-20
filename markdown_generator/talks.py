@@ -42,7 +42,7 @@ def create_md(lines: list, layout: list):
         
         # Parse the YAML variables
         md = f"---\ntitle: \"{item[layout.index('title')]}\"\n"
-        md += "collection: publications"
+        md += "collection: talks"
         if len(layout) == len(HEADER_UPDATED):
             md += f"\ncategory: {item[layout.index('category')]}"
         else:

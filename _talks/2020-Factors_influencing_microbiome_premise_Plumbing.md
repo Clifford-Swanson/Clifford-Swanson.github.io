@@ -1,6 +1,6 @@
 ---
 title: "Identification of Factors Influencing the Drinking Water Microbiome on the Premise Plumbing"
-collection: publications
+collection: talks
 category: conference
 research_area:
   - Drinking Water

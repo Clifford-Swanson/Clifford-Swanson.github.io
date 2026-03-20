@@ -1,6 +1,6 @@
 ---
 title: "Serial Changes in the Microbiome on Reusable Nebulizers in Hospitalized Patients"
-collection: publications
+collection: talks
 category: conference
 research_area:
   - Public Health

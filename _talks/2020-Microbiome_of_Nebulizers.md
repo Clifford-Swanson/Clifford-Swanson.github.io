@@ -1,6 +1,6 @@
 ---
 title: "The Microbiome in Nebulizers Used with Mouthpieces or Facemasks by Hospitalized Non-Cystic Fibrosis Patients"
-collection: publications
+collection: talks
 category: conference
 research_area:
   - Public Health

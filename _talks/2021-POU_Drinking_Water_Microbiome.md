@@ -1,6 +1,6 @@
 ---
 title: " Impact of Point-of-Use Filtration on Drinking Water Microbiome"
-collection: publications
+collection: talks
 category: conference
 research_area:
   - Drinking Water

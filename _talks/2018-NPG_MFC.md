@@ -1,6 +1,6 @@
 ---
 title: "Non-Platinum Group Catalysts to Improve Performance of a Membraneless Microbial Fuel Cell"
-collection: publications
+collection: talks
 category: conference
 research_area:
   - Wastewater

@@ -1,6 +1,6 @@
 ---
 title: "Characterization of the Microbiome on Various Nebulizer Parts After Short-Term Use by Hospitalized Patients"
-collection: publications
+collection: talks
 category: conference
 research_area:
   - Public Health

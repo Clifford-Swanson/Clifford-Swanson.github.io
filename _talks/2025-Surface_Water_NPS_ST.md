@@ -1,6 +1,6 @@
 ---
 title: "Microbiome-Scale Identification of Surface Water Pollution"
-collection: publications
+collection: talks
 category: conference
 research_area:
   - Data Science

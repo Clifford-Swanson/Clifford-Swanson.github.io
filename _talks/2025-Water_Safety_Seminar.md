@@ -1,6 +1,6 @@
 ---
 title: "Holistic Assessment of Water Safety"
-collection: publications
+collection: talks
 category: seminar
 research_area:
   - Drinking Water
