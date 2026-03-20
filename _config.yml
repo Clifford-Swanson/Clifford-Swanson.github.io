@@ -260,7 +260,7 @@ defaults:
        comments: true
        share: true
        related: true
-       sidebar: false
+       sidebar: 
    # _pages
    - scope:
        path: ""
@@ -268,7 +268,7 @@ defaults:
      values:
        layout: single
        author_profile: true
-       sidebar: false
+       sidebar: 
    # _teaching
    - scope:
        path: ""
@@ -278,7 +278,7 @@ defaults:
        author_profile: true
        share: true
        comments: true
-       sidebar: false
+       sidebar: 
    # _publications
    - scope:
        path: ""
@@ -299,7 +299,7 @@ defaults:
        author_profile: true
        share: true
        comment: true
-       sidebar: false
+       sidebar: 
    # _talks
    - scope:
        path: ""
@@ -308,7 +308,7 @@ defaults:
        layout: talk
        author_profile: true
        share: true
-       sidebar: false
+       sidebar: 
 
 
 

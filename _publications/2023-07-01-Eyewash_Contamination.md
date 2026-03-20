@@ -2,7 +2,9 @@
 title: "Risks of exposure to microbial contamination in eyewash stations"
 collection: publications
 category: manuscripts
-research_area: Drinking Water
+research_area:
+  - Drinking Water
+  - Public Health
 permalink: /publication/2023-07-01-Eyewash_Contamination
 excerpt: 'Emergency eyewash stations are important safety equipment characterized by long water age. Significant increases in microbial contamination were detected in eyewash stations with water ages longer than 1 day. Enterobacter and Mycobacterium were identified in high abundance in eyewash stations with prolonged water age, suggesting eyewash stations as potential sources of pathogen exposure. Proper eyewash flushing was shown to be an effective practice to mitigate risks of exposure to microbial contaminants from eyewash use.'
 date: 2023-07-01

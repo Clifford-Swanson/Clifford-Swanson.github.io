@@ -47,8 +47,14 @@ def create_md(lines: list, layout: list):
             md += f"\ncategory: {item[layout.index('category')]}"
         else:
             md += "\ncategory: manuscripts"
-        if len(str(item[layout.index('research_area')])) > 5:
-            md += f"\nresearch_area: {html_escape(item[layout.index('research_area')])}"
+        research_area_raw = str(item[layout.index('research_area')]).strip()
+        if research_area_raw:
+            areas = [a.strip() for a in research_area_raw.split('/') if a.strip()]
+            if areas:
+                md += "\nresearch_area:"
+                for area in areas:
+                    md += f"\n  - {html_escape(area)}"
+
         md += f"\npermalink: /publication/{html_filename}"
         if len(str(item[layout.index('excerpt')])) > 5:
             md += f"\nexcerpt: '{html_escape(item[layout.index('excerpt')])}'"

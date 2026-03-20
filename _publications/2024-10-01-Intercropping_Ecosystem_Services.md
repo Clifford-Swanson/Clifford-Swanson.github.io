@@ -2,7 +2,9 @@
 title: "Maize-alfalfa intercropping alleviates the dependence of multiple ecosystem services on nonrenewable fertilization"
 collection: publications
 category: manuscripts
-research_area: Microbiology
+research_area:
+  - Microbiology
+  - Data Science
 permalink: /publication/2024-10-01-Intercropping_Ecosystem_Services
 excerpt: 'Phosphorus is a nonrenewable source of fertilization, which will challenge the future of food production and cropland sustainability worldwide. Crop diversity is known to promote greater productivity, yet the capacity of crop diversity to alleviate productivity dependence on nonrenewable fertilization and promote multiple ecosystem services remains virtually unknown. Here, we conducted a field experiment to quantify the contribution of maize-alfalfa intercropping to soil biodiversity and multiple ecosystem services under contrasting phosphorus fertilization levels. Results showed that unfertilized intercropping can support higher levels of ecosystem services such as soil microbial habitat, plant-soil mutualism, nutrient cycling, and soil carbon storage compared to phosphorus-fertilized monoculture. Intercropping could optimize the delivery of soil diversity and multiple ecosystem services override phosphorus, including microbial diversity, weighted ecosystem services, productivity stability and sustainability, and soil microbial habitat were 5–30 times higher, respectively. Unfertilized intercropping also helped to reduce important tradeoffs between productivity and soil microbial diversity compared with fertilized monoculture. Together, our results provide evidence that intercropping can optimize crop use of phosphorus, and promote multiple important ecosystem services, which can help alleviate global dependence on nonrenewable, and often environmentally deleterious fertilizer inputs.'
 date: 2024-10-01
